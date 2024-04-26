@@ -1,4 +1,4 @@
-﻿using Domain.Products;
+﻿using Domain.Shared;
 
 namespace Domain.Orders
 {
