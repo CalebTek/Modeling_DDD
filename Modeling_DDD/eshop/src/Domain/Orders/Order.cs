@@ -15,6 +15,8 @@ namespace Domain.Orders
         public CustomerId CustomerId { get; private set; }
         public OrderStatus Status { get; private set; }
 
+        public IList<LIneItem > LineItems => _lineItems.ToList();
+
         public static Order Create(CustomerId customerId)
         {
             var order = new Order()
