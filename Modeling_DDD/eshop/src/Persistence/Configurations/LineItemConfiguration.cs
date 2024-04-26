@@ -18,10 +18,7 @@ namespace Persistence.Configurations
             builder.HasOne<Product>()
                 .WithMany().HasForeignKey(li => li.ProductId);
 
-            builder.OwnsOne(li => li.Price, priceBuilder =>
-            {
-                priceBuilder.Property(m => m.Currency).HasMaxLength(3);
-            });
+            builder.OwnsOne(li => li.Price);
         }
     }
 }
