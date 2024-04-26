@@ -10,7 +10,7 @@ namespace Domain.Orders
 
         private Order() { }
 
-        public Guid Id { get; private set; }
+        public OrderId Id { get; private set; }
         public Guid CustomerId { get; private set; }
 
         public static Order Create(Customer customer)
