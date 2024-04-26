@@ -19,7 +19,7 @@ namespace Persistence.Configurations
                 .WithMany().HasForeignKey(o => o.CustomerId)
                 .IsRequired();
 
-            builder.HasMany("_lineItems").WithOne()
+            builder.HasMany(o => o.LineItems).WithOne()
                 .HasForeignKey(li => li.OrderId);
         }
     }
