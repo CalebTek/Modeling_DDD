@@ -2,6 +2,7 @@
 {
     public class Customer
     {
+        // StronglyTypeId Nuget Packages
         public CustomerId Id { get; private set; }
 
         public string Name { get; private set; } = string.Empty;
