@@ -13,13 +13,15 @@ namespace Domain.Orders
 
         public OrderId Id { get; private set; }
         public CustomerId CustomerId { get; private set; }
+        public OrderStatus Status { get; private set; }
 
         public static Order Create(CustomerId customerId)
         {
             var order = new Order()
             {
                 Id = new OrderId(Guid.NewGuid()),
-                CustomerId = customerId
+                CustomerId = customerId,
+                Status = OrderStatus.Pending
             };
 
             return order;
