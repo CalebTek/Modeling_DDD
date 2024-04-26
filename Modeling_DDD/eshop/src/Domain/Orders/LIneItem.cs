@@ -1,10 +1,11 @@
-﻿using Domain.Shared;
+﻿using Domain.Products;
+using Domain.Shared;
 
 namespace Domain.Orders
 {
     public class LIneItem
     {
-        internal LIneItem(Guid id, Guid orderId, Guid productId, Money price)
+        internal LIneItem(LIneItemId id, OrderId orderId, ProductId productId, Money price)
         {
             Id = id;
             OrderId = orderId;
@@ -12,9 +13,9 @@ namespace Domain.Orders
             Price = price;
         }
 
-        public Guid Id { get; private set; }
-        public Guid OrderId { get; private set; }
-        public Guid ProductId { get; private set; }
+        public LIneItemId Id { get; private set; }
+        public OrderId OrderId { get; private set; }
+        public ProductId ProductId { get; private set; }
         public Money Price { get; private set; }
     }
 }
