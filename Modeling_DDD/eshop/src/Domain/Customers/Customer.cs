@@ -1,4 +1,4 @@
-﻿namespace Domain.Customer
+﻿namespace Domain.Customers
 {
     public class Customer
     {
