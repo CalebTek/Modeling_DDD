@@ -3,6 +3,7 @@ using Domain.Products;
 
 namespace Domain.Orders
 {
+    // Aggregate
     public class Order
     {
         private readonly HashSet<LIneItem> _lineItems = new();
