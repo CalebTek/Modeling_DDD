@@ -13,7 +13,7 @@ namespace Persistence.Configurations
 
             builder.Property(o => o.Id).HasConversion(
                 orderId => orderId.Value,
-                value => new OrderId(value);
+                value => new OrderId(value));
 
             builder.HasOne<Customer>()
                 .WithMany().HasForeignKey(o => o.CustomerId)
