@@ -1,4 +1,6 @@
-﻿namespace Domain.Products
+﻿using Domain.Shared;
+
+namespace Domain.Products
 {
     public class Product
     {
