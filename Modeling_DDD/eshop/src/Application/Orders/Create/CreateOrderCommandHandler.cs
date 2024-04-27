@@ -1,4 +1,6 @@
-﻿using MediatR;
+﻿using Domain.Customers;
+using Domain.Orders;
+using MediatR;
 using Persistence;
 
 namespace Application.Orders.Create
@@ -14,7 +16,18 @@ namespace Application.Orders.Create
 
         public async Task Handle(CreateOrderCommand request, CancellationToken cancellationToken)
         {
-           var customer = await _context.Customers.Fin
+           var customer = await _context.Customers.FindAsync(new CustomerId(request.CustomerId));
+
+            if (customer == null)
+            {
+                return;
+            }
+
+            var order = Order.Create(customer.Id);
+
+            _context.Orders.Add(order);
+
+            await _context.SaveChangesAsync();
         }
     }
 }
