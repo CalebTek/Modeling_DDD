@@ -1,4 +1,4 @@
 ﻿namespace Domain.Orders
 {
-    public record LIneItemId(Guid Value);
+    public record LineItemId(Guid Value);
 }
