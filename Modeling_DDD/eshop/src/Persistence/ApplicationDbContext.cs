@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Domain.Customers;
+using Microsoft.EntityFrameworkCore;
 
 namespace Persistence
 {
@@ -17,6 +18,8 @@ namespace Persistence
 
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(ApplicationDbContext).Assembly);
         }
+
+        public DbSet<Customer> Customers { get; set; }
 
     }
 }
