@@ -9,7 +9,7 @@ namespace Domain.Orders
     {
         private readonly HashSet<LineItem> _lineItems = new();
 
-        private Order() { }
+        private Order() { } // For EF only
 
         public OrderId Id { get; private set; }
         public CustomerId CustomerId { get; private set; }
