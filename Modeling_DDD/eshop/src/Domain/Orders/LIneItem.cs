@@ -12,7 +12,7 @@ namespace Domain.Orders
             ProductId = productId;
             Price = price;  
         }
-        private LineItem() { }
+        private LineItem() { } // For EF
 
         public LineItemId Id { get; private set; }
         public OrderId OrderId { get; private set; }
