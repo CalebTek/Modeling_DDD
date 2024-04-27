@@ -10,8 +10,9 @@ namespace Domain.Orders
             Id = id;
             OrderId = orderId;
             ProductId = productId;
-            Price = price;
+            Price = price;  
         }
+        private LineItem() { }
 
         public LineItemId Id { get; private set; }
         public OrderId OrderId { get; private set; }
